@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql12223776',#kaushik066
-        'USER': 'sql12223776',#kaushik066
-        'PASSWORD': 'JMwrG48aVU',#Kaushik@066
-        'HOST': 'sql12.freemysqlhosting.net',
+        'NAME': 'kaushik066$taskmanager',#kaushik066
+        'USER': 'kaushik066',#kaushik066
+        'PASSWORD': 'Ashubaba@371',#Kaushik@066
+        'HOST': 'kaushik066.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
