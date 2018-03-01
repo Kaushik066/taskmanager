@@ -1,0 +1,26 @@
+{% include 'partials/header.html' %}
+	<form action = "/edit/{{todo.id}}" method="POST">
+		{% csrf_token %}
+		<table>
+			<tr>
+				<th><label for="title">Title</label></th>
+				<th><label for="text">Text</label></th>
+				<th><label for="status">Status</label></th>
+			</tr>
+			<tr>
+				<td><input type="text" name="title" id="title" placeholder="{{todo.title}}"></td>
+				<td><input type="text" name="text" id="text" placeholder="{{todo.text}}"></td>
+				<td>
+					<input type="radio" name="status" value="Not Completed" id="status" {% if todo.status %} checked {% endif %} > Not Completed<br>
+					<input type="radio" name="status" value="Completed" id="status"  {% if todo.status %} checked {% endif %}> Completed<br>
+					<input type="radio" name="status" value="High Priority" id="status"  {% if todo.status %} checked {% endif %} > High Priority<br>
+					<input type="radio" name="status" value="Low Priority" id="status"  {% if todo.status %} checked {% endif %} > Low Priority<br>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" name="submit" value="Make Changes">
+	</form>
+	<br>
+	<a href="/">Cancel</a>
+{% include 'partials/footer.html' %}

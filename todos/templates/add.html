@@ -1,0 +1,27 @@
+{% include 'partials/header.html' %}
+	<form action="{% url 'add' %}" method="POST">
+		{% csrf_token %}
+		<table>
+			<tr>
+				<th><label for="title">Title</label></th>
+				<th><label for="text">Text</label></th>
+				<th><label for="status">Status</label></th>
+			</tr>
+			<tr>
+				<td><input type="text" name="title" id="title"></td>
+				<td><input type="text" name="text" id="text"></td>
+				<td>
+					<input type="radio" name="status" value="Not Completed" id="status" checked> Not Completed<br>
+					<input type="radio" name="status" value="Completed" id="status"> Completed<br>
+					<input type="radio" name="status" value="High Priority" id="status"> High Priority<br>
+					<input type="radio" name="status" value="Low Priority" id="status"> Low Priority<br>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" value="submit">
+	</form>
+	<br>
+	<a href="/">Go Back</a>
+
+{% include 'partials/footer.html' %}
